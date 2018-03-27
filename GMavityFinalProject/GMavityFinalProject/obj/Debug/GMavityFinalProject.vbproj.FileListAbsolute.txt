@@ -1,0 +1,15 @@
+C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\bin\Debug\GMavityFinalProject.exe.config
+C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\bin\Debug\GMavityFinalProject.exe
+C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\bin\Debug\GMavityFinalProject.pdb
+C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\bin\Debug\GMavityFinalProject.xml
+C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\obj\Debug\GMavityFinalProject.vbprojResolveAssemblyReference.cache
+C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\obj\Debug\GMavityFinalProject.frmCreate.resources
+C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\obj\Debug\GMavityFinalProject.frmEdit.resources
+C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\obj\Debug\GMavityFinalProject.Resources.resources
+C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\obj\Debug\GMavityFinalProject.frmSublist.resources
+C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\obj\Debug\GMavityFinalProject.vbproj.GenerateResource.cache
+C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\obj\Debug\GMavityFinalProject.vbproj.CoreCompileInputs.cache
+C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\obj\Debug\GMavityFinalProject.exe
+C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\obj\Debug\GMavityFinalProject.xml
+C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\obj\Debug\GMavityFinalProject.pdb
+C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\obj\Debug\GMavityFinalProject.frmMain.resources
