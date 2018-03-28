@@ -92,11 +92,11 @@ Partial Class frmCreate
         'lblEffort
         '
         Me.lblEffort.AutoSize = True
-        Me.lblEffort.Location = New System.Drawing.Point(50, 130)
+        Me.lblEffort.Location = New System.Drawing.Point(50, 125)
         Me.lblEffort.Name = "lblEffort"
         Me.lblEffort.Size = New System.Drawing.Size(59, 13)
         Me.lblEffort.TabIndex = 16
-        Me.lblEffort.Text = "Effort (0-5):"
+        Me.lblEffort.Text = "Effort (1-5):"
         '
         'lblDueDate
         '
@@ -110,11 +110,11 @@ Partial Class frmCreate
         'lblRank
         '
         Me.lblRank.AutoSize = True
-        Me.lblRank.Location = New System.Drawing.Point(46, 93)
+        Me.lblRank.Location = New System.Drawing.Point(47, 93)
         Me.lblRank.Name = "lblRank"
         Me.lblRank.Size = New System.Drawing.Size(63, 13)
         Me.lblRank.TabIndex = 14
-        Me.lblRank.Text = "Rank (0-5): "
+        Me.lblRank.Text = "Rank (1-5): "
         '
         'lblType
         '
@@ -128,7 +128,7 @@ Partial Class frmCreate
         'lblName
         '
         Me.lblName.AutoSize = True
-        Me.lblName.Location = New System.Drawing.Point(68, 30)
+        Me.lblName.Location = New System.Drawing.Point(69, 25)
         Me.lblName.Name = "lblName"
         Me.lblName.Size = New System.Drawing.Size(41, 13)
         Me.lblName.TabIndex = 12

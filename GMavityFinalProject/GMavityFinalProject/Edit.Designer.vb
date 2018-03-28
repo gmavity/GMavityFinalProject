@@ -39,7 +39,7 @@ Partial Class frmEdit
         'lblName
         '
         Me.lblName.AutoSize = True
-        Me.lblName.Location = New System.Drawing.Point(73, 35)
+        Me.lblName.Location = New System.Drawing.Point(73, 30)
         Me.lblName.Name = "lblName"
         Me.lblName.Size = New System.Drawing.Size(41, 13)
         Me.lblName.TabIndex = 0
@@ -61,7 +61,7 @@ Partial Class frmEdit
         Me.lblRank.Name = "lblRank"
         Me.lblRank.Size = New System.Drawing.Size(63, 13)
         Me.lblRank.TabIndex = 2
-        Me.lblRank.Text = "Rank (0-5): "
+        Me.lblRank.Text = "Rank (1-5): "
         '
         'lblDueDate
         '
@@ -75,16 +75,16 @@ Partial Class frmEdit
         'lblEffort
         '
         Me.lblEffort.AutoSize = True
-        Me.lblEffort.Location = New System.Drawing.Point(55, 135)
+        Me.lblEffort.Location = New System.Drawing.Point(55, 130)
         Me.lblEffort.Name = "lblEffort"
         Me.lblEffort.Size = New System.Drawing.Size(59, 13)
         Me.lblEffort.TabIndex = 4
-        Me.lblEffort.Text = "Effort (0-5):"
+        Me.lblEffort.Text = "Effort (1-5):"
         '
         'lblDescription
         '
         Me.lblDescription.AutoSize = True
-        Me.lblDescription.Location = New System.Drawing.Point(18, 209)
+        Me.lblDescription.Location = New System.Drawing.Point(19, 209)
         Me.lblDescription.Name = "lblDescription"
         Me.lblDescription.Size = New System.Drawing.Size(96, 13)
         Me.lblDescription.TabIndex = 5
