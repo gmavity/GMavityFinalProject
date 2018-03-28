@@ -32,6 +32,7 @@ Partial Class frmMain
         Me.lblTaskType = New System.Windows.Forms.Label()
         Me.cmbTasks = New System.Windows.Forms.ComboBox()
         Me.dgvTasks = New System.Windows.Forms.DataGridView()
+        Me.btnSublist = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvTasks, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -55,13 +56,13 @@ Partial Class frmMain
         'CreateTaskToolStripMenuItem
         '
         Me.CreateTaskToolStripMenuItem.Name = "CreateTaskToolStripMenuItem"
-        Me.CreateTaskToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CreateTaskToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.CreateTaskToolStripMenuItem.Text = "Create Task"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'AboutToolStripMenuItem
@@ -113,11 +114,21 @@ Partial Class frmMain
         Me.dgvTasks.Size = New System.Drawing.Size(775, 362)
         Me.dgvTasks.TabIndex = 5
         '
+        'btnSublist
+        '
+        Me.btnSublist.Location = New System.Drawing.Point(542, 34)
+        Me.btnSublist.Name = "btnSublist"
+        Me.btnSublist.Size = New System.Drawing.Size(85, 30)
+        Me.btnSublist.TabIndex = 6
+        Me.btnSublist.Text = "Create Sublist"
+        Me.btnSublist.UseVisualStyleBackColor = True
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnSublist)
         Me.Controls.Add(Me.dgvTasks)
         Me.Controls.Add(Me.cmbTasks)
         Me.Controls.Add(Me.lblTaskType)
@@ -145,4 +156,5 @@ Partial Class frmMain
     Friend WithEvents lblTaskType As Label
     Friend WithEvents cmbTasks As ComboBox
     Friend WithEvents dgvTasks As DataGridView
+    Friend WithEvents btnSublist As Button
 End Class
