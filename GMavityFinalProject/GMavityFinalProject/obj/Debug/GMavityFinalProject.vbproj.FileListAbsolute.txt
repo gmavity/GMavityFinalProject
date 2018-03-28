@@ -14,3 +14,5 @@ C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinal
 C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\obj\Debug\GMavityFinalProject.pdb
 C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\obj\Debug\GMavityFinalProject.frmMain.resources
 C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\obj\Debug\GMavityFinalProject.frmAbout.resources
+C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\bin\Debug\Tasks.mdf
+C:\Users\Grace\source\repos\GMavityFinalProject\GMavityFinalProject\GMavityFinalProject\bin\Debug\Tasks_log.ldf

@@ -116,7 +116,7 @@ Partial Class frmMain
         '
         'btnSublist
         '
-        Me.btnSublist.Location = New System.Drawing.Point(542, 34)
+        Me.btnSublist.Location = New System.Drawing.Point(542, 28)
         Me.btnSublist.Name = "btnSublist"
         Me.btnSublist.Size = New System.Drawing.Size(85, 30)
         Me.btnSublist.TabIndex = 6
