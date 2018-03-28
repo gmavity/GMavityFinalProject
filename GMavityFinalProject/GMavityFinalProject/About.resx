@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="lblAbout.Text" xml:space="preserve">
+    <value>This to-do list allows the user to create, edit, and delete tasks they need to do.  They can also create a sublist of tasks by selecting some tasks from the main list and clicking the "Create Sublist" button.  It also allows the user to rank their tasks based on a number scale, and filter them based on a few criteria.</value>
+  </data>
 </root>
