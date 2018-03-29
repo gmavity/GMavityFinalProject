@@ -133,6 +133,12 @@
     <Compile Include="Sublist.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TasksDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TasksDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TaskTypes.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="About.resx">
@@ -168,6 +174,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="TasksDataSet.xsc">
+      <DependentUpon>TasksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TasksDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TasksDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TasksDataSet.xss">
+      <DependentUpon>TasksDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Tasks.mdf">

@@ -22,6 +22,7 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CreateTaskToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -33,8 +34,19 @@ Partial Class frmMain
         Me.cmbTasks = New System.Windows.Forms.ComboBox()
         Me.dgvTasks = New System.Windows.Forms.DataGridView()
         Me.btnSublist = New System.Windows.Forms.Button()
+        Me.NameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RankDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EffortDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DueDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescriptionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TaskListBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TasksDataSet = New GMavityFinalProject.TasksDataSet()
+        Me.TaskListTableAdapter = New GMavityFinalProject.TasksDataSetTableAdapters.TaskListTableAdapter()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvTasks, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TaskListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TasksDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -108,9 +120,16 @@ Partial Class frmMain
         '
         'dgvTasks
         '
+        Me.dgvTasks.AllowUserToAddRows = False
+        Me.dgvTasks.AllowUserToDeleteRows = False
+        Me.dgvTasks.AllowUserToOrderColumns = True
+        Me.dgvTasks.AutoGenerateColumns = False
         Me.dgvTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvTasks.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameDataGridViewTextBoxColumn, Me.TypeDataGridViewTextBoxColumn, Me.RankDataGridViewTextBoxColumn, Me.EffortDataGridViewTextBoxColumn, Me.DueDateDataGridViewTextBoxColumn, Me.DescriptionDataGridViewTextBoxColumn})
+        Me.dgvTasks.DataSource = Me.TaskListBindingSource
         Me.dgvTasks.Location = New System.Drawing.Point(13, 76)
         Me.dgvTasks.Name = "dgvTasks"
+        Me.dgvTasks.ReadOnly = True
         Me.dgvTasks.Size = New System.Drawing.Size(775, 362)
         Me.dgvTasks.TabIndex = 5
         '
@@ -122,6 +141,62 @@ Partial Class frmMain
         Me.btnSublist.TabIndex = 6
         Me.btnSublist.Text = "Create Sublist"
         Me.btnSublist.UseVisualStyleBackColor = True
+        '
+        'NameDataGridViewTextBoxColumn
+        '
+        Me.NameDataGridViewTextBoxColumn.DataPropertyName = "Name"
+        Me.NameDataGridViewTextBoxColumn.HeaderText = "Name"
+        Me.NameDataGridViewTextBoxColumn.Name = "NameDataGridViewTextBoxColumn"
+        Me.NameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TypeDataGridViewTextBoxColumn
+        '
+        Me.TypeDataGridViewTextBoxColumn.DataPropertyName = "Type"
+        Me.TypeDataGridViewTextBoxColumn.HeaderText = "Type"
+        Me.TypeDataGridViewTextBoxColumn.Name = "TypeDataGridViewTextBoxColumn"
+        Me.TypeDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'RankDataGridViewTextBoxColumn
+        '
+        Me.RankDataGridViewTextBoxColumn.DataPropertyName = "Rank"
+        Me.RankDataGridViewTextBoxColumn.HeaderText = "Rank"
+        Me.RankDataGridViewTextBoxColumn.Name = "RankDataGridViewTextBoxColumn"
+        Me.RankDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'EffortDataGridViewTextBoxColumn
+        '
+        Me.EffortDataGridViewTextBoxColumn.DataPropertyName = "Effort"
+        Me.EffortDataGridViewTextBoxColumn.HeaderText = "Effort"
+        Me.EffortDataGridViewTextBoxColumn.Name = "EffortDataGridViewTextBoxColumn"
+        Me.EffortDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DueDateDataGridViewTextBoxColumn
+        '
+        Me.DueDateDataGridViewTextBoxColumn.DataPropertyName = "DueDate"
+        Me.DueDateDataGridViewTextBoxColumn.HeaderText = "DueDate"
+        Me.DueDateDataGridViewTextBoxColumn.Name = "DueDateDataGridViewTextBoxColumn"
+        Me.DueDateDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DescriptionDataGridViewTextBoxColumn
+        '
+        Me.DescriptionDataGridViewTextBoxColumn.DataPropertyName = "Description"
+        Me.DescriptionDataGridViewTextBoxColumn.HeaderText = "Description"
+        Me.DescriptionDataGridViewTextBoxColumn.Name = "DescriptionDataGridViewTextBoxColumn"
+        Me.DescriptionDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TaskListBindingSource
+        '
+        Me.TaskListBindingSource.DataMember = "TaskList"
+        Me.TaskListBindingSource.DataSource = Me.TasksDataSet
+        '
+        'TasksDataSet
+        '
+        Me.TasksDataSet.DataSetName = "TasksDataSet"
+        Me.TasksDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TaskListTableAdapter
+        '
+        Me.TaskListTableAdapter.ClearBeforeFill = True
         '
         'frmMain
         '
@@ -141,6 +216,8 @@ Partial Class frmMain
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.dgvTasks, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TaskListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TasksDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -157,4 +234,13 @@ Partial Class frmMain
     Friend WithEvents cmbTasks As ComboBox
     Friend WithEvents dgvTasks As DataGridView
     Friend WithEvents btnSublist As Button
+    Friend WithEvents TasksDataSet As TasksDataSet
+    Friend WithEvents TaskListBindingSource As BindingSource
+    Friend WithEvents TaskListTableAdapter As TasksDataSetTableAdapters.TaskListTableAdapter
+    Friend WithEvents NameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RankDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EffortDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DueDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DescriptionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
