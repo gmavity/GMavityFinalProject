@@ -22,6 +22,7 @@ Partial Class frmCreate
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.dtpDueDate = New System.Windows.Forms.DateTimePicker()
         Me.txtDescription = New System.Windows.Forms.TextBox()
         Me.txtEffort = New System.Windows.Forms.TextBox()
@@ -34,6 +35,8 @@ Partial Class frmCreate
         Me.lblRank = New System.Windows.Forms.Label()
         Me.lblType = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
+        Me.ttipRank = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ttipEffort = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'dtpDueDate
@@ -170,4 +173,6 @@ Partial Class frmCreate
     Friend WithEvents lblRank As Label
     Friend WithEvents lblType As Label
     Friend WithEvents lblName As Label
+    Friend WithEvents ttipRank As ToolTip
+    Friend WithEvents ttipEffort As ToolTip
 End Class
