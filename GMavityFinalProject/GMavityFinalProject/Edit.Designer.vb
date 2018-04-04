@@ -37,6 +37,7 @@ Partial Class frmEdit
         Me.dtpDueDate = New System.Windows.Forms.DateTimePicker()
         Me.ttipRank = New System.Windows.Forms.ToolTip(Me.components)
         Me.ttipEffort = New System.Windows.Forms.ToolTip(Me.components)
+        Me.btnSubmit = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblName
@@ -137,11 +138,21 @@ Partial Class frmEdit
         Me.dtpDueDate.Size = New System.Drawing.Size(100, 20)
         Me.dtpDueDate.TabIndex = 11
         '
+        'btnSubmit
+        '
+        Me.btnSubmit.Location = New System.Drawing.Point(131, 390)
+        Me.btnSubmit.Name = "btnSubmit"
+        Me.btnSubmit.Size = New System.Drawing.Size(75, 23)
+        Me.btnSubmit.TabIndex = 12
+        Me.btnSubmit.Text = "Submit"
+        Me.btnSubmit.UseVisualStyleBackColor = True
+        '
         'frmEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(359, 392)
+        Me.ClientSize = New System.Drawing.Size(359, 442)
+        Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.dtpDueDate)
         Me.Controls.Add(Me.txtDescription)
         Me.Controls.Add(Me.txtEffort)
@@ -175,4 +186,5 @@ Partial Class frmEdit
     Friend WithEvents dtpDueDate As DateTimePicker
     Friend WithEvents ttipRank As ToolTip
     Friend WithEvents ttipEffort As ToolTip
+    Friend WithEvents btnSubmit As Button
 End Class

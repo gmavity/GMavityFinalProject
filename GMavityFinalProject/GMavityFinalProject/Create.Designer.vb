@@ -37,6 +37,7 @@ Partial Class frmCreate
         Me.lblName = New System.Windows.Forms.Label()
         Me.ttipRank = New System.Windows.Forms.ToolTip(Me.components)
         Me.ttipEffort = New System.Windows.Forms.ToolTip(Me.components)
+        Me.btnSubmit = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'dtpDueDate
@@ -137,11 +138,21 @@ Partial Class frmCreate
         Me.lblName.TabIndex = 12
         Me.lblName.Text = "Name: "
         '
+        'btnSubmit
+        '
+        Me.btnSubmit.Location = New System.Drawing.Point(129, 396)
+        Me.btnSubmit.Name = "btnSubmit"
+        Me.btnSubmit.Size = New System.Drawing.Size(75, 23)
+        Me.btnSubmit.TabIndex = 24
+        Me.btnSubmit.Text = "Submit"
+        Me.btnSubmit.UseVisualStyleBackColor = True
+        '
         'frmCreate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(359, 392)
+        Me.ClientSize = New System.Drawing.Size(371, 459)
+        Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.dtpDueDate)
         Me.Controls.Add(Me.txtDescription)
         Me.Controls.Add(Me.txtEffort)
@@ -175,4 +186,5 @@ Partial Class frmCreate
     Friend WithEvents lblName As Label
     Friend WithEvents ttipRank As ToolTip
     Friend WithEvents ttipEffort As ToolTip
+    Friend WithEvents btnSubmit As Button
 End Class
