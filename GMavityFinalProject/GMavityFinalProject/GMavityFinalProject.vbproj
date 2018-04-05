@@ -191,11 +191,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Tasks.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Tasks.mdf" />
     <Content Include="Tasks_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Tasks.mdf</DependentUpon>
     </Content>
   </ItemGroup>
