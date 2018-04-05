@@ -1,21 +1,39 @@
 ﻿Public Class frmMain
     Private mTypes As New TaskTypes
+    Private currentTask As Integer
+    Private adapter As New TasksDataSetTableAdapters.TaskListTableAdapter
+
+    Public ReadOnly Property currentTaskID() As Integer
+        Get
+            Return currentTask
+        End Get
+    End Property
+
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+        'closes program
         Me.Close()
     End Sub
 
     Private Sub CreateTaskToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreateTaskToolStripMenuItem.Click
+        'opens form to create new task
         frmCreate.ShowDialog()
         updateView()
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        'opens About form
         frmAbout.ShowDialog()
     End Sub
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
-        frmEdit.ShowDialog()
-        updateView()
+        'edits selected task
+        If dgvTasks.SelectedRows.Count > 0 Then
+            currentTask = CType(dgvTasks.SelectedRows(0).Cells(0).Value, Integer)
+            frmEdit.ShowDialog()
+            updateView()
+        Else
+            MessageBox.Show("Please select the task to edit")
+        End If
     End Sub
 
     Private Sub btnSublist_Click(sender As Object, e As EventArgs) Handles btnSublist.Click
@@ -38,16 +56,14 @@
         cmbTasks.DataSource = mTypes.Items
     End Sub
 
-    Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        'updates database when main form is closing
-        Try
-            Me.Validate()
-            Me.TaskListBindingSource.EndEdit()
-            Me.TaskListTableAdapter.Update(Me.TasksDataSet.TaskList)
-            MsgBox("Update successful")
-
-        Catch ex As Exception
-            MsgBox("Update failed")
-        End Try
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        'deletes selected task
+        If dgvTasks.SelectedRows.Count > 0 Then
+            currentTask = CType(dgvTasks.SelectedRows(0).Cells(0).Value, Integer)
+            adapter.Delete(currentTask)
+            updateView()
+        Else
+            MessageBox.Show("Please select the task to delete")
+        End If
     End Sub
 End Class
