@@ -37,4 +37,17 @@
         Me.TaskListTableAdapter.Fill(Me.TasksDataSet.TaskList)
         cmbTasks.DataSource = mTypes.Items
     End Sub
+
+    Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        'updates database when main form is closing
+        Try
+            Me.Validate()
+            Me.TaskListBindingSource.EndEdit()
+            Me.TaskListTableAdapter.Update(Me.TasksDataSet.TaskList)
+            MsgBox("Update successful")
+
+        Catch ex As Exception
+            MsgBox("Update failed")
+        End Try
+    End Sub
 End Class

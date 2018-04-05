@@ -33,7 +33,6 @@ Partial Class frmMain
         Me.lblTaskType = New System.Windows.Forms.Label()
         Me.cmbTasks = New System.Windows.Forms.ComboBox()
         Me.dgvTasks = New System.Windows.Forms.DataGridView()
-        Me.btnSublist = New System.Windows.Forms.Button()
         Me.NameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RankDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,6 +41,7 @@ Partial Class frmMain
         Me.DescriptionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TaskListBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TasksDataSet = New GMavityFinalProject.TasksDataSet()
+        Me.btnSublist = New System.Windows.Forms.Button()
         Me.TaskListTableAdapter = New GMavityFinalProject.TasksDataSetTableAdapters.TaskListTableAdapter()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvTasks, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -133,15 +133,6 @@ Partial Class frmMain
         Me.dgvTasks.Size = New System.Drawing.Size(775, 362)
         Me.dgvTasks.TabIndex = 5
         '
-        'btnSublist
-        '
-        Me.btnSublist.Location = New System.Drawing.Point(542, 28)
-        Me.btnSublist.Name = "btnSublist"
-        Me.btnSublist.Size = New System.Drawing.Size(85, 30)
-        Me.btnSublist.TabIndex = 6
-        Me.btnSublist.Text = "Create Sublist"
-        Me.btnSublist.UseVisualStyleBackColor = True
-        '
         'NameDataGridViewTextBoxColumn
         '
         Me.NameDataGridViewTextBoxColumn.DataPropertyName = "Name"
@@ -193,6 +184,15 @@ Partial Class frmMain
         '
         Me.TasksDataSet.DataSetName = "TasksDataSet"
         Me.TasksDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'btnSublist
+        '
+        Me.btnSublist.Location = New System.Drawing.Point(542, 28)
+        Me.btnSublist.Name = "btnSublist"
+        Me.btnSublist.Size = New System.Drawing.Size(85, 30)
+        Me.btnSublist.TabIndex = 6
+        Me.btnSublist.Text = "Create Sublist"
+        Me.btnSublist.UseVisualStyleBackColor = True
         '
         'TaskListTableAdapter
         '
