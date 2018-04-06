@@ -7,10 +7,32 @@
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
         'adds the task to the database, if all fields are filled in
         Dim adapter As New TasksDataSetTableAdapters.TaskListTableAdapter
-        If txtName.Text = "" Or txtType.Text = "" Or txtRank.Text = "" Or txtEffort.Text = "" Then
+        If txtName.Text = "" Or txtType.Text = "" Then
             MessageBox.Show("Please fill in all fields")
         Else
-            adapter.Insert(txtName.Text, txtType.Text, txtRank.Text, txtEffort.Text, dtpDueDate.Value, txtDescription.Text)
+            Dim rank As Integer = 5
+            Dim effort As Integer = 5
+
+            If radRank1.Checked Then
+                rank = 1
+            ElseIf radRank2.Checked Then
+                rank = 2
+            ElseIf radRank3.Checked Then
+                rank = 3
+            ElseIf radRank4.Checked Then
+                rank = 4
+            End If
+            If radEffort1.Checked Then
+                effort = 1
+            ElseIf radEffort2.Checked Then
+                effort = 2
+            ElseIf radEffort3.Checked Then
+                effort = 3
+            ElseIf radEffort4.Checked Then
+                effort = 4
+            End If
+
+            adapter.Insert(txtName.Text, txtType.Text, rank, effort, dtpDueDate.Value, txtDescription.Text)
             Me.Close()
         End If
     End Sub

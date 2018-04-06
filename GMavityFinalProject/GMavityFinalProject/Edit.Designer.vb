@@ -31,13 +31,25 @@ Partial Class frmEdit
         Me.lblDescription = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.txtType = New System.Windows.Forms.TextBox()
-        Me.txtRank = New System.Windows.Forms.TextBox()
-        Me.txtEffort = New System.Windows.Forms.TextBox()
         Me.txtDescription = New System.Windows.Forms.TextBox()
         Me.dtpDueDate = New System.Windows.Forms.DateTimePicker()
         Me.ttipRank = New System.Windows.Forms.ToolTip(Me.components)
         Me.ttipEffort = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnSubmit = New System.Windows.Forms.Button()
+        Me.grpEffort = New System.Windows.Forms.GroupBox()
+        Me.radEffort5 = New System.Windows.Forms.RadioButton()
+        Me.radEffort2 = New System.Windows.Forms.RadioButton()
+        Me.radEffort4 = New System.Windows.Forms.RadioButton()
+        Me.radEffort1 = New System.Windows.Forms.RadioButton()
+        Me.radEffort3 = New System.Windows.Forms.RadioButton()
+        Me.grpRank = New System.Windows.Forms.GroupBox()
+        Me.radRank5 = New System.Windows.Forms.RadioButton()
+        Me.radRank4 = New System.Windows.Forms.RadioButton()
+        Me.radRank3 = New System.Windows.Forms.RadioButton()
+        Me.radRank2 = New System.Windows.Forms.RadioButton()
+        Me.radRank1 = New System.Windows.Forms.RadioButton()
+        Me.grpEffort.SuspendLayout()
+        Me.grpRank.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblName
@@ -108,20 +120,6 @@ Partial Class frmEdit
         Me.txtType.Size = New System.Drawing.Size(100, 20)
         Me.txtType.TabIndex = 7
         '
-        'txtRank
-        '
-        Me.txtRank.Location = New System.Drawing.Point(121, 95)
-        Me.txtRank.Name = "txtRank"
-        Me.txtRank.Size = New System.Drawing.Size(100, 20)
-        Me.txtRank.TabIndex = 8
-        '
-        'txtEffort
-        '
-        Me.txtEffort.Location = New System.Drawing.Point(121, 127)
-        Me.txtEffort.Name = "txtEffort"
-        Me.txtEffort.Size = New System.Drawing.Size(100, 20)
-        Me.txtEffort.TabIndex = 9
-        '
         'txtDescription
         '
         Me.txtDescription.Location = New System.Drawing.Point(121, 206)
@@ -147,16 +145,150 @@ Partial Class frmEdit
         Me.btnSubmit.Text = "Submit"
         Me.btnSubmit.UseVisualStyleBackColor = True
         '
+        'grpEffort
+        '
+        Me.grpEffort.Controls.Add(Me.radEffort5)
+        Me.grpEffort.Controls.Add(Me.radEffort2)
+        Me.grpEffort.Controls.Add(Me.radEffort4)
+        Me.grpEffort.Controls.Add(Me.radEffort1)
+        Me.grpEffort.Controls.Add(Me.radEffort3)
+        Me.grpEffort.Location = New System.Drawing.Point(120, 127)
+        Me.grpEffort.Name = "grpEffort"
+        Me.grpEffort.Size = New System.Drawing.Size(188, 30)
+        Me.grpEffort.TabIndex = 28
+        Me.grpEffort.TabStop = False
+        '
+        'radEffort5
+        '
+        Me.radEffort5.AutoSize = True
+        Me.radEffort5.Location = New System.Drawing.Point(155, 7)
+        Me.radEffort5.Name = "radEffort5"
+        Me.radEffort5.Size = New System.Drawing.Size(31, 17)
+        Me.radEffort5.TabIndex = 34
+        Me.radEffort5.TabStop = True
+        Me.radEffort5.Text = "5"
+        Me.radEffort5.UseVisualStyleBackColor = True
+        '
+        'radEffort2
+        '
+        Me.radEffort2.AutoSize = True
+        Me.radEffort2.Location = New System.Drawing.Point(44, 7)
+        Me.radEffort2.Name = "radEffort2"
+        Me.radEffort2.Size = New System.Drawing.Size(31, 17)
+        Me.radEffort2.TabIndex = 31
+        Me.radEffort2.TabStop = True
+        Me.radEffort2.Text = "2"
+        Me.radEffort2.UseVisualStyleBackColor = True
+        '
+        'radEffort4
+        '
+        Me.radEffort4.AutoSize = True
+        Me.radEffort4.Location = New System.Drawing.Point(118, 7)
+        Me.radEffort4.Name = "radEffort4"
+        Me.radEffort4.Size = New System.Drawing.Size(31, 17)
+        Me.radEffort4.TabIndex = 33
+        Me.radEffort4.TabStop = True
+        Me.radEffort4.Text = "4"
+        Me.radEffort4.UseVisualStyleBackColor = True
+        '
+        'radEffort1
+        '
+        Me.radEffort1.AutoSize = True
+        Me.radEffort1.Checked = True
+        Me.radEffort1.Location = New System.Drawing.Point(6, 7)
+        Me.radEffort1.Name = "radEffort1"
+        Me.radEffort1.Size = New System.Drawing.Size(31, 17)
+        Me.radEffort1.TabIndex = 30
+        Me.radEffort1.TabStop = True
+        Me.radEffort1.Text = "1"
+        Me.radEffort1.UseVisualStyleBackColor = True
+        '
+        'radEffort3
+        '
+        Me.radEffort3.AutoSize = True
+        Me.radEffort3.Location = New System.Drawing.Point(81, 7)
+        Me.radEffort3.Name = "radEffort3"
+        Me.radEffort3.Size = New System.Drawing.Size(31, 17)
+        Me.radEffort3.TabIndex = 32
+        Me.radEffort3.TabStop = True
+        Me.radEffort3.Text = "3"
+        Me.radEffort3.UseVisualStyleBackColor = True
+        '
+        'grpRank
+        '
+        Me.grpRank.Controls.Add(Me.radRank5)
+        Me.grpRank.Controls.Add(Me.radRank4)
+        Me.grpRank.Controls.Add(Me.radRank3)
+        Me.grpRank.Controls.Add(Me.radRank2)
+        Me.grpRank.Controls.Add(Me.radRank1)
+        Me.grpRank.Location = New System.Drawing.Point(120, 90)
+        Me.grpRank.Name = "grpRank"
+        Me.grpRank.Size = New System.Drawing.Size(188, 30)
+        Me.grpRank.TabIndex = 27
+        Me.grpRank.TabStop = False
+        '
+        'radRank5
+        '
+        Me.radRank5.AutoSize = True
+        Me.radRank5.Location = New System.Drawing.Point(155, 7)
+        Me.radRank5.Name = "radRank5"
+        Me.radRank5.Size = New System.Drawing.Size(31, 17)
+        Me.radRank5.TabIndex = 29
+        Me.radRank5.Text = "5"
+        Me.radRank5.UseVisualStyleBackColor = True
+        '
+        'radRank4
+        '
+        Me.radRank4.AutoSize = True
+        Me.radRank4.Location = New System.Drawing.Point(118, 7)
+        Me.radRank4.Name = "radRank4"
+        Me.radRank4.Size = New System.Drawing.Size(31, 17)
+        Me.radRank4.TabIndex = 28
+        Me.radRank4.Text = "4"
+        Me.radRank4.UseVisualStyleBackColor = True
+        '
+        'radRank3
+        '
+        Me.radRank3.AutoSize = True
+        Me.radRank3.Location = New System.Drawing.Point(81, 7)
+        Me.radRank3.Name = "radRank3"
+        Me.radRank3.Size = New System.Drawing.Size(31, 17)
+        Me.radRank3.TabIndex = 27
+        Me.radRank3.Text = "3"
+        Me.radRank3.UseVisualStyleBackColor = True
+        '
+        'radRank2
+        '
+        Me.radRank2.AutoSize = True
+        Me.radRank2.Location = New System.Drawing.Point(44, 7)
+        Me.radRank2.Name = "radRank2"
+        Me.radRank2.Size = New System.Drawing.Size(31, 17)
+        Me.radRank2.TabIndex = 1
+        Me.radRank2.Text = "2"
+        Me.radRank2.UseVisualStyleBackColor = True
+        '
+        'radRank1
+        '
+        Me.radRank1.AutoSize = True
+        Me.radRank1.Checked = True
+        Me.radRank1.Location = New System.Drawing.Point(6, 7)
+        Me.radRank1.Name = "radRank1"
+        Me.radRank1.Size = New System.Drawing.Size(31, 17)
+        Me.radRank1.TabIndex = 0
+        Me.radRank1.TabStop = True
+        Me.radRank1.Text = "1"
+        Me.radRank1.UseVisualStyleBackColor = True
+        '
         'frmEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(359, 442)
+        Me.Controls.Add(Me.grpEffort)
+        Me.Controls.Add(Me.grpRank)
         Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.dtpDueDate)
         Me.Controls.Add(Me.txtDescription)
-        Me.Controls.Add(Me.txtEffort)
-        Me.Controls.Add(Me.txtRank)
         Me.Controls.Add(Me.txtType)
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.lblDescription)
@@ -167,6 +299,10 @@ Partial Class frmEdit
         Me.Controls.Add(Me.lblName)
         Me.Name = "frmEdit"
         Me.Text = "Edit Task"
+        Me.grpEffort.ResumeLayout(False)
+        Me.grpEffort.PerformLayout()
+        Me.grpRank.ResumeLayout(False)
+        Me.grpRank.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -180,11 +316,21 @@ Partial Class frmEdit
     Friend WithEvents lblDescription As Label
     Friend WithEvents txtName As TextBox
     Friend WithEvents txtType As TextBox
-    Friend WithEvents txtRank As TextBox
-    Friend WithEvents txtEffort As TextBox
     Friend WithEvents txtDescription As TextBox
     Friend WithEvents dtpDueDate As DateTimePicker
     Friend WithEvents ttipRank As ToolTip
     Friend WithEvents ttipEffort As ToolTip
     Friend WithEvents btnSubmit As Button
+    Friend WithEvents grpEffort As GroupBox
+    Friend WithEvents radEffort5 As RadioButton
+    Friend WithEvents radEffort2 As RadioButton
+    Friend WithEvents radEffort4 As RadioButton
+    Friend WithEvents radEffort1 As RadioButton
+    Friend WithEvents radEffort3 As RadioButton
+    Friend WithEvents grpRank As GroupBox
+    Friend WithEvents radRank5 As RadioButton
+    Friend WithEvents radRank4 As RadioButton
+    Friend WithEvents radRank3 As RadioButton
+    Friend WithEvents radRank2 As RadioButton
+    Friend WithEvents radRank1 As RadioButton
 End Class
