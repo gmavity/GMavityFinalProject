@@ -48,6 +48,10 @@ Partial Class frmEdit
         Me.radRank3 = New System.Windows.Forms.RadioButton()
         Me.radRank2 = New System.Windows.Forms.RadioButton()
         Me.radRank1 = New System.Windows.Forms.RadioButton()
+        Me.ttipName = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ttipType = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ttipDueDate = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ttipDescription = New System.Windows.Forms.ToolTip(Me.components)
         Me.grpEffort.SuspendLayout()
         Me.grpRank.SuspendLayout()
         Me.SuspendLayout()
@@ -333,4 +337,8 @@ Partial Class frmEdit
     Friend WithEvents radRank3 As RadioButton
     Friend WithEvents radRank2 As RadioButton
     Friend WithEvents radRank1 As RadioButton
+    Friend WithEvents ttipName As ToolTip
+    Friend WithEvents ttipType As ToolTip
+    Friend WithEvents ttipDueDate As ToolTip
+    Friend WithEvents ttipDescription As ToolTip
 End Class

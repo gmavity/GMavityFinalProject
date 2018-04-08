@@ -37,17 +37,21 @@ Partial Class frmCreate
         Me.ttipEffort = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnSubmit = New System.Windows.Forms.Button()
         Me.grpRank = New System.Windows.Forms.GroupBox()
-        Me.grpEffort = New System.Windows.Forms.GroupBox()
-        Me.radRank1 = New System.Windows.Forms.RadioButton()
-        Me.radRank2 = New System.Windows.Forms.RadioButton()
-        Me.radRank3 = New System.Windows.Forms.RadioButton()
-        Me.radRank4 = New System.Windows.Forms.RadioButton()
         Me.radRank5 = New System.Windows.Forms.RadioButton()
+        Me.radRank4 = New System.Windows.Forms.RadioButton()
+        Me.radRank3 = New System.Windows.Forms.RadioButton()
+        Me.radRank2 = New System.Windows.Forms.RadioButton()
+        Me.radRank1 = New System.Windows.Forms.RadioButton()
+        Me.grpEffort = New System.Windows.Forms.GroupBox()
         Me.radEffort5 = New System.Windows.Forms.RadioButton()
-        Me.radEffort4 = New System.Windows.Forms.RadioButton()
-        Me.radEffort3 = New System.Windows.Forms.RadioButton()
         Me.radEffort2 = New System.Windows.Forms.RadioButton()
+        Me.radEffort4 = New System.Windows.Forms.RadioButton()
         Me.radEffort1 = New System.Windows.Forms.RadioButton()
+        Me.radEffort3 = New System.Windows.Forms.RadioButton()
+        Me.ttipName = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ttipType = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ttipDueDate = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ttipDescription = New System.Windows.Forms.ToolTip(Me.components)
         Me.grpRank.SuspendLayout()
         Me.grpEffort.SuspendLayout()
         Me.SuspendLayout()
@@ -158,18 +162,49 @@ Partial Class frmCreate
         Me.grpRank.TabIndex = 25
         Me.grpRank.TabStop = False
         '
-        'grpEffort
+        'radRank5
         '
-        Me.grpEffort.Controls.Add(Me.radEffort5)
-        Me.grpEffort.Controls.Add(Me.radEffort2)
-        Me.grpEffort.Controls.Add(Me.radEffort4)
-        Me.grpEffort.Controls.Add(Me.radEffort1)
-        Me.grpEffort.Controls.Add(Me.radEffort3)
-        Me.grpEffort.Location = New System.Drawing.Point(117, 123)
-        Me.grpEffort.Name = "grpEffort"
-        Me.grpEffort.Size = New System.Drawing.Size(188, 30)
-        Me.grpEffort.TabIndex = 26
-        Me.grpEffort.TabStop = False
+        Me.radRank5.AutoSize = True
+        Me.radRank5.Location = New System.Drawing.Point(155, 7)
+        Me.radRank5.Name = "radRank5"
+        Me.radRank5.Size = New System.Drawing.Size(31, 17)
+        Me.radRank5.TabIndex = 29
+        Me.radRank5.TabStop = True
+        Me.radRank5.Text = "5"
+        Me.radRank5.UseVisualStyleBackColor = True
+        '
+        'radRank4
+        '
+        Me.radRank4.AutoSize = True
+        Me.radRank4.Location = New System.Drawing.Point(118, 7)
+        Me.radRank4.Name = "radRank4"
+        Me.radRank4.Size = New System.Drawing.Size(31, 17)
+        Me.radRank4.TabIndex = 28
+        Me.radRank4.TabStop = True
+        Me.radRank4.Text = "4"
+        Me.radRank4.UseVisualStyleBackColor = True
+        '
+        'radRank3
+        '
+        Me.radRank3.AutoSize = True
+        Me.radRank3.Location = New System.Drawing.Point(81, 7)
+        Me.radRank3.Name = "radRank3"
+        Me.radRank3.Size = New System.Drawing.Size(31, 17)
+        Me.radRank3.TabIndex = 27
+        Me.radRank3.TabStop = True
+        Me.radRank3.Text = "3"
+        Me.radRank3.UseVisualStyleBackColor = True
+        '
+        'radRank2
+        '
+        Me.radRank2.AutoSize = True
+        Me.radRank2.Location = New System.Drawing.Point(44, 7)
+        Me.radRank2.Name = "radRank2"
+        Me.radRank2.Size = New System.Drawing.Size(31, 17)
+        Me.radRank2.TabIndex = 1
+        Me.radRank2.TabStop = True
+        Me.radRank2.Text = "2"
+        Me.radRank2.UseVisualStyleBackColor = True
         '
         'radRank1
         '
@@ -183,49 +218,18 @@ Partial Class frmCreate
         Me.radRank1.Text = "1"
         Me.radRank1.UseVisualStyleBackColor = True
         '
-        'radRank2
+        'grpEffort
         '
-        Me.radRank2.AutoSize = True
-        Me.radRank2.Location = New System.Drawing.Point(44, 7)
-        Me.radRank2.Name = "radRank2"
-        Me.radRank2.Size = New System.Drawing.Size(31, 17)
-        Me.radRank2.TabIndex = 1
-        Me.radRank2.TabStop = True
-        Me.radRank2.Text = "2"
-        Me.radRank2.UseVisualStyleBackColor = True
-        '
-        'radRank3
-        '
-        Me.radRank3.AutoSize = True
-        Me.radRank3.Location = New System.Drawing.Point(81, 7)
-        Me.radRank3.Name = "radRank3"
-        Me.radRank3.Size = New System.Drawing.Size(31, 17)
-        Me.radRank3.TabIndex = 27
-        Me.radRank3.TabStop = True
-        Me.radRank3.Text = "3"
-        Me.radRank3.UseVisualStyleBackColor = True
-        '
-        'radRank4
-        '
-        Me.radRank4.AutoSize = True
-        Me.radRank4.Location = New System.Drawing.Point(118, 7)
-        Me.radRank4.Name = "radRank4"
-        Me.radRank4.Size = New System.Drawing.Size(31, 17)
-        Me.radRank4.TabIndex = 28
-        Me.radRank4.TabStop = True
-        Me.radRank4.Text = "4"
-        Me.radRank4.UseVisualStyleBackColor = True
-        '
-        'radRank5
-        '
-        Me.radRank5.AutoSize = True
-        Me.radRank5.Location = New System.Drawing.Point(155, 7)
-        Me.radRank5.Name = "radRank5"
-        Me.radRank5.Size = New System.Drawing.Size(31, 17)
-        Me.radRank5.TabIndex = 29
-        Me.radRank5.TabStop = True
-        Me.radRank5.Text = "5"
-        Me.radRank5.UseVisualStyleBackColor = True
+        Me.grpEffort.Controls.Add(Me.radEffort5)
+        Me.grpEffort.Controls.Add(Me.radEffort2)
+        Me.grpEffort.Controls.Add(Me.radEffort4)
+        Me.grpEffort.Controls.Add(Me.radEffort1)
+        Me.grpEffort.Controls.Add(Me.radEffort3)
+        Me.grpEffort.Location = New System.Drawing.Point(117, 123)
+        Me.grpEffort.Name = "grpEffort"
+        Me.grpEffort.Size = New System.Drawing.Size(188, 30)
+        Me.grpEffort.TabIndex = 26
+        Me.grpEffort.TabStop = False
         '
         'radEffort5
         '
@@ -238,28 +242,6 @@ Partial Class frmCreate
         Me.radEffort5.Text = "5"
         Me.radEffort5.UseVisualStyleBackColor = True
         '
-        'radEffort4
-        '
-        Me.radEffort4.AutoSize = True
-        Me.radEffort4.Location = New System.Drawing.Point(118, 7)
-        Me.radEffort4.Name = "radEffort4"
-        Me.radEffort4.Size = New System.Drawing.Size(31, 17)
-        Me.radEffort4.TabIndex = 33
-        Me.radEffort4.TabStop = True
-        Me.radEffort4.Text = "4"
-        Me.radEffort4.UseVisualStyleBackColor = True
-        '
-        'radEffort3
-        '
-        Me.radEffort3.AutoSize = True
-        Me.radEffort3.Location = New System.Drawing.Point(81, 7)
-        Me.radEffort3.Name = "radEffort3"
-        Me.radEffort3.Size = New System.Drawing.Size(31, 17)
-        Me.radEffort3.TabIndex = 32
-        Me.radEffort3.TabStop = True
-        Me.radEffort3.Text = "3"
-        Me.radEffort3.UseVisualStyleBackColor = True
-        '
         'radEffort2
         '
         Me.radEffort2.AutoSize = True
@@ -270,6 +252,17 @@ Partial Class frmCreate
         Me.radEffort2.TabStop = True
         Me.radEffort2.Text = "2"
         Me.radEffort2.UseVisualStyleBackColor = True
+        '
+        'radEffort4
+        '
+        Me.radEffort4.AutoSize = True
+        Me.radEffort4.Location = New System.Drawing.Point(118, 7)
+        Me.radEffort4.Name = "radEffort4"
+        Me.radEffort4.Size = New System.Drawing.Size(31, 17)
+        Me.radEffort4.TabIndex = 33
+        Me.radEffort4.TabStop = True
+        Me.radEffort4.Text = "4"
+        Me.radEffort4.UseVisualStyleBackColor = True
         '
         'radEffort1
         '
@@ -282,6 +275,17 @@ Partial Class frmCreate
         Me.radEffort1.TabStop = True
         Me.radEffort1.Text = "1"
         Me.radEffort1.UseVisualStyleBackColor = True
+        '
+        'radEffort3
+        '
+        Me.radEffort3.AutoSize = True
+        Me.radEffort3.Location = New System.Drawing.Point(81, 7)
+        Me.radEffort3.Name = "radEffort3"
+        Me.radEffort3.Size = New System.Drawing.Size(31, 17)
+        Me.radEffort3.TabIndex = 32
+        Me.radEffort3.TabStop = True
+        Me.radEffort3.Text = "3"
+        Me.radEffort3.UseVisualStyleBackColor = True
         '
         'frmCreate
         '
@@ -337,4 +341,8 @@ Partial Class frmCreate
     Friend WithEvents radEffort4 As RadioButton
     Friend WithEvents radEffort1 As RadioButton
     Friend WithEvents radEffort3 As RadioButton
+    Friend WithEvents ttipName As ToolTip
+    Friend WithEvents ttipType As ToolTip
+    Friend WithEvents ttipDueDate As ToolTip
+    Friend WithEvents ttipDescription As ToolTip
 End Class

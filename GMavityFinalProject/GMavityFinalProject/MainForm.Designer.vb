@@ -33,7 +33,6 @@ Partial Class frmMain
         Me.lblTaskType = New System.Windows.Forms.Label()
         Me.cmbTasks = New System.Windows.Forms.ComboBox()
         Me.dgvTasks = New System.Windows.Forms.DataGridView()
-        Me.btnSublist = New System.Windows.Forms.Button()
         Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,7 +42,11 @@ Partial Class frmMain
         Me.DescriptionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TaskListBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TasksDataSet = New GMavityFinalProject.TasksDataSet()
+        Me.btnSublist = New System.Windows.Forms.Button()
         Me.TaskListTableAdapter = New GMavityFinalProject.TasksDataSetTableAdapters.TaskListTableAdapter()
+        Me.ttipEdit = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ttipDelete = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ttipSublist = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvTasks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TaskListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -134,15 +137,6 @@ Partial Class frmMain
         Me.dgvTasks.Size = New System.Drawing.Size(775, 362)
         Me.dgvTasks.TabIndex = 5
         '
-        'btnSublist
-        '
-        Me.btnSublist.Location = New System.Drawing.Point(542, 28)
-        Me.btnSublist.Name = "btnSublist"
-        Me.btnSublist.Size = New System.Drawing.Size(85, 30)
-        Me.btnSublist.TabIndex = 6
-        Me.btnSublist.Text = "Create Sublist"
-        Me.btnSublist.UseVisualStyleBackColor = True
-        '
         'Id
         '
         Me.Id.DataPropertyName = "Id"
@@ -202,6 +196,15 @@ Partial Class frmMain
         Me.TasksDataSet.DataSetName = "TasksDataSet"
         Me.TasksDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'btnSublist
+        '
+        Me.btnSublist.Location = New System.Drawing.Point(542, 28)
+        Me.btnSublist.Name = "btnSublist"
+        Me.btnSublist.Size = New System.Drawing.Size(85, 30)
+        Me.btnSublist.TabIndex = 6
+        Me.btnSublist.Text = "Create Sublist"
+        Me.btnSublist.UseVisualStyleBackColor = True
+        '
         'TaskListTableAdapter
         '
         Me.TaskListTableAdapter.ClearBeforeFill = True
@@ -252,4 +255,7 @@ Partial Class frmMain
     Friend WithEvents EffortDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DueDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DescriptionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ttipEdit As ToolTip
+    Friend WithEvents ttipDelete As ToolTip
+    Friend WithEvents ttipSublist As ToolTip
 End Class

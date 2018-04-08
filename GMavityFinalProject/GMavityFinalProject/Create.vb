@@ -1,7 +1,12 @@
 ﻿Public Class frmCreate
     Private Sub frmCreate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'load tooltips
+        ttipName.SetToolTip(lblName, "Assign a name for your task")
+        ttipType.SetToolTip(lblType, "Schoolwork, housework, etc")
         ttipRank.SetToolTip(lblRank, "1 being the lowest")
         ttipEffort.SetToolTip(lblEffort, "1 being the lowest")
+        ttipDueDate.SetToolTip(lblDueDate, "When is this due?")
+        ttipDescription.SetToolTip(lblDescription, "Make some notes for yourself")
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click

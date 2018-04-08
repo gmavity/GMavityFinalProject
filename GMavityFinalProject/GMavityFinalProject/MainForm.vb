@@ -41,6 +41,11 @@
     End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'load tooltips and information into form elements
+        ttipEdit.SetToolTip(btnEdit, "Edit the selected task")
+        ttipDelete.SetToolTip(btnDelete, "Delete the selected task")
+        ttipSublist.SetToolTip(btnSublist, "Create a sublist of the selected tasks")
+
         updateView()
         'Fill the Type combobox with the various types, pulled from the TaskType class
         cmbTasks.DisplayMember = "Type"

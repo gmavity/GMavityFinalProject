@@ -1,9 +1,13 @@
 ﻿Public Class frmEdit
     Private adapter As New TasksDataSetTableAdapters.TaskListTableAdapter
     Private Sub frmEdit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'fill in all datafields with the associated information
+        'load tooltips and fill in all datafields with the associated information
+        ttipName.SetToolTip(lblName, "Assign a name for your task")
+        ttipType.SetToolTip(lblType, "Schoolwork, housework, etc")
         ttipRank.SetToolTip(lblRank, "1 being the lowest")
         ttipEffort.SetToolTip(lblEffort, "1 being the lowest")
+        ttipDueDate.SetToolTip(lblDueDate, "When is this due?")
+        ttipDescription.SetToolTip(lblDescription, "Make some notes for yourself")
 
         Dim table As TasksDataSet.TaskListDataTable
         table = adapter.GetData()
