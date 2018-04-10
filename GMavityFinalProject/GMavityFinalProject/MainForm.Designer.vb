@@ -47,6 +47,7 @@ Partial Class frmMain
         Me.ttipEdit = New System.Windows.Forms.ToolTip(Me.components)
         Me.ttipDelete = New System.Windows.Forms.ToolTip(Me.components)
         Me.ttipSublist = New System.Windows.Forms.ToolTip(Me.components)
+        Me.btnAll = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvTasks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TaskListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -198,7 +199,7 @@ Partial Class frmMain
         '
         'btnSublist
         '
-        Me.btnSublist.Location = New System.Drawing.Point(542, 28)
+        Me.btnSublist.Location = New System.Drawing.Point(690, 28)
         Me.btnSublist.Name = "btnSublist"
         Me.btnSublist.Size = New System.Drawing.Size(85, 30)
         Me.btnSublist.TabIndex = 6
@@ -209,11 +210,21 @@ Partial Class frmMain
         '
         Me.TaskListTableAdapter.ClearBeforeFill = True
         '
+        'btnAll
+        '
+        Me.btnAll.Location = New System.Drawing.Point(442, 28)
+        Me.btnAll.Name = "btnAll"
+        Me.btnAll.Size = New System.Drawing.Size(85, 30)
+        Me.btnAll.TabIndex = 7
+        Me.btnAll.Text = "View All"
+        Me.btnAll.UseVisualStyleBackColor = True
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnAll)
         Me.Controls.Add(Me.btnSublist)
         Me.Controls.Add(Me.dgvTasks)
         Me.Controls.Add(Me.cmbTasks)
@@ -258,4 +269,5 @@ Partial Class frmMain
     Friend WithEvents ttipEdit As ToolTip
     Friend WithEvents ttipDelete As ToolTip
     Friend WithEvents ttipSublist As ToolTip
+    Friend WithEvents btnAll As Button
 End Class

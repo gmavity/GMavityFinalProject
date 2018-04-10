@@ -2,6 +2,7 @@
     Private mTypes As New TaskTypes
     Private currentTask As Integer
     Private adapter As New TasksDataSetTableAdapters.TaskListTableAdapter
+    Private formLoading As Boolean = True
 
     Public ReadOnly Property currentTaskID() As Integer
         Get
@@ -46,19 +47,25 @@
         ttipDelete.SetToolTip(btnDelete, "Delete the selected task")
         ttipSublist.SetToolTip(btnSublist, "Create a sublist of the selected tasks")
 
-        updateView()
         'Fill the Type combobox with the various types, pulled from the TaskType class
         cmbTasks.DisplayMember = "Type"
-        cmbTasks.ValueMember = "TypeId"
+        cmbTasks.ValueMember = "Type"
         cmbTasks.DropDownStyle = ComboBoxStyle.DropDownList
         cmbTasks.SelectedIndex = -1
+
+        updateView()
+
+        formLoading = False
     End Sub
 
     Private Sub updateView()
         'updates the datagridview and the type combobox with fresh information
         'TODO: This line of code loads data into the 'TasksDataSet.TaskList' table. You can move, or remove it, as needed.
-        Me.TaskListTableAdapter.Fill(Me.TasksDataSet.TaskList)
+        Dim table As DataTable = adapter.GetData()
+        dgvTasks.DataSource = table
+        formLoading = True 'make sure that refreshing the combobox doesn't also filter the datagridview accidentally
         cmbTasks.DataSource = mTypes.Items
+        formLoading = False
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
@@ -69,6 +76,20 @@
             updateView()
         Else
             MessageBox.Show("Please select the task to delete")
+        End If
+    End Sub
+
+    Private Sub btnAll_Click(sender As Object, e As EventArgs) Handles btnAll.Click
+        'allow the user to view all the tasks again after filtering on the type
+        updateView()
+    End Sub
+
+    Private Sub cmbTasks_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbTasks.SelectedIndexChanged
+        'filters the tasks based on the type selected
+        If Not formLoading Then
+            Dim type As String = cmbTasks.SelectedValue
+            Dim table As DataTable = adapter.GetDataByType(type)
+            dgvTasks.DataSource = table
         End If
     End Sub
 End Class
