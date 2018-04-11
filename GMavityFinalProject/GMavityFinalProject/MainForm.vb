@@ -46,6 +46,7 @@
         ttipEdit.SetToolTip(btnEdit, "Edit the selected task")
         ttipDelete.SetToolTip(btnDelete, "Delete the selected task")
         ttipSublist.SetToolTip(btnSublist, "Create a sublist of the selected tasks")
+        ttipAll.SetToolTip(btnAll, "Show all tasks")
 
         'Fill the Type combobox with the various types, pulled from the TaskType class
         cmbTasks.DisplayMember = "Type"

@@ -48,6 +48,7 @@ Partial Class frmMain
         Me.ttipDelete = New System.Windows.Forms.ToolTip(Me.components)
         Me.ttipSublist = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnAll = New System.Windows.Forms.Button()
+        Me.ttipAll = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvTasks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TaskListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -270,4 +271,5 @@ Partial Class frmMain
     Friend WithEvents ttipDelete As ToolTip
     Friend WithEvents ttipSublist As ToolTip
     Friend WithEvents btnAll As Button
+    Friend WithEvents ttipAll As ToolTip
 End Class
