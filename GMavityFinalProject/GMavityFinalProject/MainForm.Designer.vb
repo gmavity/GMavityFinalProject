@@ -49,6 +49,7 @@ Partial Class frmMain
         Me.ttipSublist = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnAll = New System.Windows.Forms.Button()
         Me.ttipAll = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ttipFilter = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvTasks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TaskListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -272,4 +273,5 @@ Partial Class frmMain
     Friend WithEvents ttipSublist As ToolTip
     Friend WithEvents btnAll As Button
     Friend WithEvents ttipAll As ToolTip
+    Friend WithEvents ttipFilter As ToolTip
 End Class
