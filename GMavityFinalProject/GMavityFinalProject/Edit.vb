@@ -50,7 +50,7 @@
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
         'edits the task in the database, if all fields are filled in
-        If txtName.Text = "" Or txtType.Text = "" Then
+        If txtName.Text = "" Or txtType.Text = "" Then 'make sure the name and type aren't blank (rank and effort are radio buttons, and description is ok if it's blank)
             MessageBox.Show("Please fill in all fields")
         Else
             Dim rank As Integer = 5
@@ -76,7 +76,7 @@
             End If
 
             adapter.Update(txtName.Text, txtType.Text, rank, effort, dtpDueDate.Value, txtDescription.Text, frmMain.currentTaskID, frmMain.currentTaskID)
-            Me.Close()
+            Me.Close() 'once the entry is logged, the form should close automatically
         End If
     End Sub
 End Class

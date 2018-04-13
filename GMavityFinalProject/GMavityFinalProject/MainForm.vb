@@ -1,8 +1,8 @@
 ﻿Public Class frmMain
-    Private mTypes As New TaskTypes
-    Private currentTask As Integer
-    Private adapter As New TasksDataSetTableAdapters.TaskListTableAdapter
-    Private formLoading As Boolean = True
+    Private mTypes As New TaskTypes 'allows interfacing with the TaskTypes class to get only distinct task types
+    Private currentTask As Integer 'keeps track of the current task ID, for use between forms
+    Private adapter As New TasksDataSetTableAdapters.TaskListTableAdapter 'to interface with the database
+    Private formLoading As Boolean = True 'to keep track of if the form is being popoulated
 
     Public ReadOnly Property currentTaskID() As Integer
         Get
@@ -28,7 +28,7 @@
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         'edits selected task
-        If dgvTasks.SelectedRows.Count > 0 Then
+        If dgvTasks.SelectedRows.Count > 0 Then 'make sure the user selected a task to edit
             currentTask = CType(dgvTasks.SelectedRows(0).Cells(0).Value, Integer)
             frmEdit.ShowDialog()
             updateView()
@@ -62,7 +62,6 @@
 
     Private Sub updateView()
         'updates the datagridview and the type combobox with fresh information
-        'TODO: This line of code loads data into the 'TasksDataSet.TaskList' table. You can move, or remove it, as needed.
         Dim table As DataTable = adapter.GetData()
         dgvTasks.DataSource = table
         formLoading = True 'make sure that refreshing the combobox doesn't also filter the datagridview accidentally
@@ -72,7 +71,7 @@
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         'deletes selected task
-        If dgvTasks.SelectedRows.Count > 0 Then
+        If dgvTasks.SelectedRows.Count > 0 Then 'make sure that the user selected a task to delete
             currentTask = CType(dgvTasks.SelectedRows(0).Cells(0).Value, Integer)
             adapter.Delete(currentTask)
             updateView()
