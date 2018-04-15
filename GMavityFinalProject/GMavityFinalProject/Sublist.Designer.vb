@@ -23,6 +23,7 @@ Partial Class frmSublist
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dgvTasks = New System.Windows.Forms.DataGridView()
+        Me.btnClose = New System.Windows.Forms.Button()
         CType(Me.dgvTasks, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -34,11 +35,21 @@ Partial Class frmSublist
         Me.dgvTasks.Size = New System.Drawing.Size(775, 391)
         Me.dgvTasks.TabIndex = 0
         '
+        'btnClose
+        '
+        Me.btnClose.Location = New System.Drawing.Point(356, 444)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(85, 30)
+        Me.btnClose.TabIndex = 1
+        Me.btnClose.Text = "Close"
+        Me.btnClose.UseVisualStyleBackColor = True
+        '
         'frmSublist
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 494)
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.dgvTasks)
         Me.Name = "frmSublist"
         Me.Text = "Today's Tasks"
@@ -48,4 +59,5 @@ Partial Class frmSublist
     End Sub
 
     Friend WithEvents dgvTasks As DataGridView
+    Friend WithEvents btnClose As Button
 End Class
