@@ -24,22 +24,33 @@ Partial Class frmAbout
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAbout))
         Me.lblAbout = New System.Windows.Forms.Label()
+        Me.btnClose = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblAbout
         '
         Me.lblAbout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAbout.Location = New System.Drawing.Point(55, 40)
+        Me.lblAbout.Location = New System.Drawing.Point(51, 9)
         Me.lblAbout.Name = "lblAbout"
-        Me.lblAbout.Size = New System.Drawing.Size(451, 169)
+        Me.lblAbout.Size = New System.Drawing.Size(451, 145)
         Me.lblAbout.TabIndex = 0
         Me.lblAbout.Text = resources.GetString("lblAbout.Text")
+        '
+        'btnClose
+        '
+        Me.btnClose.Location = New System.Drawing.Point(218, 174)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(85, 30)
+        Me.btnClose.TabIndex = 1
+        Me.btnClose.Text = "Got it!"
+        Me.btnClose.UseVisualStyleBackColor = True
         '
         'frmAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(536, 223)
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.lblAbout)
         Me.Name = "frmAbout"
         Me.Text = "About"
@@ -48,4 +59,5 @@ Partial Class frmAbout
     End Sub
 
     Friend WithEvents lblAbout As Label
+    Friend WithEvents btnClose As Button
 End Class
