@@ -3,10 +3,17 @@
     Private currentTask As Integer 'keeps track of the current task ID, for use between forms
     Private adapter As New TasksDataSetTableAdapters.TaskListTableAdapter 'to interface with the database
     Private formLoading As Boolean = True 'to keep track of if the form is being popoulated
+    Private sublistTasks = New List(Of Integer)
 
     Public ReadOnly Property currentTaskID() As Integer
         Get
             Return currentTask
+        End Get
+    End Property
+
+    Public ReadOnly Property sublistTaskIDs() As List(Of Integer)
+        Get
+            Return sublistTasks
         End Get
     End Property
 
@@ -38,7 +45,16 @@
     End Sub
 
     Private Sub btnSublist_Click(sender As Object, e As EventArgs) Handles btnSublist.Click
-        frmSublist.ShowDialog()
+        'creates a list of the selected tasks to sublist, then opens a sublist form with those tasks
+        sublistTasks = New List(Of Integer)
+        If dgvTasks.SelectedRows.Count > 0 Then 'make sure the user selected tasks
+            For index As Integer = 0 To dgvTasks.SelectedRows.Count - 1
+                sublistTasks.add(CType(dgvTasks.SelectedRows(index).Cells(0).Value, Integer))
+            Next
+            frmSublist.ShowDialog()
+        Else
+            MessageBox.Show("Please select one or more tasks to create a sublist")
+        End If
     End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
