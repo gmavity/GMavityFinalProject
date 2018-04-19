@@ -3,7 +3,7 @@
     Private currentTask As Integer 'keeps track of the current task ID, for use between forms
     Private adapter As New TasksDataSetTableAdapters.TaskListTableAdapter 'to interface with the database
     Private formLoading As Boolean = True 'to keep track of if the form is being popoulated
-    Private sublistTasks = New List(Of Integer)
+    Private sublistTasks = New List(Of Integer) 'keeps track of all task ids selected for sublisting
 
     Public ReadOnly Property currentTaskID() As Integer
         Get

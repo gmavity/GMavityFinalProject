@@ -1,5 +1,5 @@
 ﻿Public Class frmEdit
-    Private adapter As New TasksDataSetTableAdapters.TaskListTableAdapter
+    Private adapter As New TasksDataSetTableAdapters.TaskListTableAdapter 'allows access to the database
     Private Sub frmEdit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'load tooltips and fill in all datafields with the associated information
         ttipName.SetToolTip(lblName, "Assign a name for your task")
@@ -9,11 +9,13 @@
         ttipDueDate.SetToolTip(lblDueDate, "When is this due?")
         ttipDescription.SetToolTip(lblDescription, "Make some notes for yourself")
 
+        'get the db information on the selected task
         Dim table As TasksDataSet.TaskListDataTable
         table = adapter.GetData()
         Dim row As TasksDataSet.TaskListRow
         row = table.FindById(frmMain.currentTaskID)
 
+        'fill in the form with the db information
         txtName.Text = row.Name
         txtType.Text = row.Type
 
