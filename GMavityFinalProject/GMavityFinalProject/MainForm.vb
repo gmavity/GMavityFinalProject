@@ -1,4 +1,6 @@
-﻿Public Class frmMain
+﻿'frmMain is the startup form of the project, and carries out most of the main functionality, like reading/deleting the data, filtering it, creating sublists, 
+'and accessing the create/update functions and the help window
+Public Class frmMain
     Private mTypes As New TaskTypes 'allows interfacing with the TaskTypes class to get only distinct task types
     Private currentTask As Integer 'keeps track of the current task ID, for use between forms
     Private adapter As New TasksDataSetTableAdapters.TaskListTableAdapter 'to interface with the database

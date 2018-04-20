@@ -1,4 +1,5 @@
-﻿Public Class frmSublist
+﻿'frmSublist allows the user to view a sublist of tasks, the ones that were selected on the main form before the sublist form was opened
+Public Class frmSublist
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         'Closes the form
         Me.Close()

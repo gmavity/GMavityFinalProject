@@ -1,4 +1,5 @@
-﻿Public Class frmCreate
+﻿'frmCreate allows the user to create a new task
+Public Class frmCreate
     Private Sub frmCreate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'load tooltips
         ttipName.SetToolTip(lblName, "Assign a name for your task")

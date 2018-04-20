@@ -1,4 +1,5 @@
-﻿Public Class frmEdit
+﻿'frmEdit allows the user to edit a task that was selected on the main form before the edit form was opened
+Public Class frmEdit
     Private adapter As New TasksDataSetTableAdapters.TaskListTableAdapter 'allows access to the database
     Private Sub frmEdit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'load tooltips and fill in all datafields with the associated information
