@@ -35,10 +35,11 @@ Partial Class frmAbout
         Me.lblAbout.Size = New System.Drawing.Size(451, 145)
         Me.lblAbout.TabIndex = 0
         Me.lblAbout.Text = resources.GetString("lblAbout.Text")
+        Me.lblAbout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(218, 174)
+        Me.btnClose.Location = New System.Drawing.Point(233, 172)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(85, 30)
         Me.btnClose.TabIndex = 1

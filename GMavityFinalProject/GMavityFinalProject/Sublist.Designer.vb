@@ -32,7 +32,7 @@ Partial Class frmSublist
         Me.dgvTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTasks.Location = New System.Drawing.Point(13, 47)
         Me.dgvTasks.Name = "dgvTasks"
-        Me.dgvTasks.Size = New System.Drawing.Size(775, 391)
+        Me.dgvTasks.Size = New System.Drawing.Size(744, 391)
         Me.dgvTasks.TabIndex = 0
         '
         'btnClose
@@ -48,7 +48,7 @@ Partial Class frmSublist
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 494)
+        Me.ClientSize = New System.Drawing.Size(773, 494)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.dgvTasks)
         Me.Name = "frmSublist"

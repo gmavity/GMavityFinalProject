@@ -144,7 +144,7 @@ Partial Class frmEdit
         '
         Me.btnSubmit.Location = New System.Drawing.Point(131, 390)
         Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(75, 23)
+        Me.btnSubmit.Size = New System.Drawing.Size(85, 30)
         Me.btnSubmit.TabIndex = 12
         Me.btnSubmit.Text = "Submit"
         Me.btnSubmit.UseVisualStyleBackColor = True

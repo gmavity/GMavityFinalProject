@@ -144,7 +144,7 @@ Partial Class frmCreate
         '
         Me.btnSubmit.Location = New System.Drawing.Point(129, 396)
         Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(75, 23)
+        Me.btnSubmit.Size = New System.Drawing.Size(85, 30)
         Me.btnSubmit.TabIndex = 24
         Me.btnSubmit.Text = "Submit"
         Me.btnSubmit.UseVisualStyleBackColor = True
@@ -291,7 +291,7 @@ Partial Class frmCreate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(371, 459)
+        Me.ClientSize = New System.Drawing.Size(359, 442)
         Me.Controls.Add(Me.grpEffort)
         Me.Controls.Add(Me.grpRank)
         Me.Controls.Add(Me.btnSubmit)
